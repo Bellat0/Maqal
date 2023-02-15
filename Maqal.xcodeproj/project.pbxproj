@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		945D9120299CCE840054047A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D911F299CCE840054047A /* AppDelegate.swift */; };
 		945D9122299CCE840054047A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9121299CCE840054047A /* SceneDelegate.swift */; };
-		945D9124299CCE840054047A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9123299CCE840054047A /* ViewController.swift */; };
+		945D9124299CCE840054047A /* ThemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9123299CCE840054047A /* ThemeCollectionViewController.swift */; };
 		945D9129299CCE850054047A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945D9128299CCE850054047A /* Assets.xcassets */; };
 		945D912C299CCE850054047A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945D912A299CCE850054047A /* LaunchScreen.storyboard */; };
 		945D9137299CCE850054047A /* MaqalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9136299CCE850054047A /* MaqalTests.swift */; };
 		945D9141299CCE850054047A /* MaqalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9140299CCE850054047A /* MaqalUITests.swift */; };
 		945D9143299CCE850054047A /* MaqalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9142299CCE850054047A /* MaqalUITestsLaunchTests.swift */; };
 		945D9150299CCE9D0054047A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 945D914F299CCE9D0054047A /* .gitignore */; };
+		945D9156299CD49F0054047A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 945D9155299CD49F0054047A /* SnapKit */; };
+		945D9158299CD5EC0054047A /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9157299CD5EC0054047A /* ThemeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		945D911C299CCE840054047A /* Maqal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maqal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945D911F299CCE840054047A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		945D9121299CCE840054047A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		945D9123299CCE840054047A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		945D9123299CCE840054047A /* ThemeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewController.swift; sourceTree = "<group>"; };
 		945D9128299CCE850054047A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		945D912B299CCE850054047A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		945D912D299CCE850054047A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		945D9140299CCE850054047A /* MaqalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalUITests.swift; sourceTree = "<group>"; };
 		945D9142299CCE850054047A /* MaqalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		945D914F299CCE9D0054047A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		945D9157299CD5EC0054047A /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945D9156299CD49F0054047A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +131,7 @@
 		945D9151299CCEA30054047A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				945D9157299CD5EC0054047A /* ThemeCollectionViewCell.swift */,
 				945D912A299CCE850054047A /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -146,7 +151,7 @@
 		945D9153299CCEC10054047A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				945D9123299CCE840054047A /* ViewController.swift */,
+				945D9123299CCE840054047A /* ThemeCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +172,9 @@
 			dependencies = (
 			);
 			name = Maqal;
+			packageProductDependencies = (
+				945D9155299CD49F0054047A /* SnapKit */,
+			);
 			productName = Maqal;
 			productReference = 945D911C299CCE840054047A /* Maqal.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +247,9 @@
 				Base,
 			);
 			mainGroup = 945D9113299CCE840054047A;
+			packageReferences = (
+				945D9154299CD49F0054047A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 945D911D299CCE840054047A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,8 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				945D9124299CCE840054047A /* ViewController.swift in Sources */,
+				945D9124299CCE840054047A /* ThemeCollectionViewController.swift in Sources */,
 				945D9120299CCE840054047A /* AppDelegate.swift in Sources */,
+				945D9158299CD5EC0054047A /* ThemeCollectionViewCell.swift in Sources */,
 				945D9122299CCE840054047A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +469,6 @@
 				INFOPLIST_FILE = "Maqal/Support files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,7 +495,6 @@
 				INFOPLIST_FILE = "Maqal/Support files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -612,6 +622,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		945D9154299CD49F0054047A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		945D9155299CD49F0054047A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 945D9154299CD49F0054047A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 945D9114299CCE840054047A /* Project object */;
 }
