@@ -18,6 +18,10 @@
 		945D9150299CCE9D0054047A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 945D914F299CCE9D0054047A /* .gitignore */; };
 		945D9156299CD49F0054047A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 945D9155299CD49F0054047A /* SnapKit */; };
 		945D9158299CD5EC0054047A /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9157299CD5EC0054047A /* ThemeCollectionViewCell.swift */; };
+		945D915A299CE0EC0054047A /* ThemeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9159299CE0EC0054047A /* ThemeAction.swift */; };
+		945D915E299D0DD00054047A /* MaqalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D915D299D0DD00054047A /* MaqalTableViewCell.swift */; };
+		945D9160299D0ECF0054047A /* MaqalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D915F299D0ECF0054047A /* MaqalTableViewController.swift */; };
+		945D9163299D12A80054047A /* Maqal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9162299D12A80054047A /* Maqal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		945D9142299CCE850054047A /* MaqalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		945D914F299CCE9D0054047A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		945D9157299CD5EC0054047A /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		945D9159299CE0EC0054047A /* ThemeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeAction.swift; sourceTree = "<group>"; };
+		945D915D299D0DD00054047A /* MaqalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalTableViewCell.swift; sourceTree = "<group>"; };
+		945D915F299D0ECF0054047A /* MaqalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalTableViewController.swift; sourceTree = "<group>"; };
+		945D9162299D12A80054047A /* Maqal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maqal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 		945D911E299CCE840054047A /* Maqal */ = {
 			isa = PBXGroup;
 			children = (
+				945D9161299D12910054047A /* Model */,
 				945D9153299CCEC10054047A /* Controller */,
 				945D9151299CCEA30054047A /* View */,
 				945D9152299CCEB10054047A /* Support files */,
@@ -132,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				945D9157299CD5EC0054047A /* ThemeCollectionViewCell.swift */,
+				945D915D299D0DD00054047A /* MaqalTableViewCell.swift */,
 				945D912A299CCE850054047A /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -152,8 +162,18 @@
 			isa = PBXGroup;
 			children = (
 				945D9123299CCE840054047A /* ThemeCollectionViewController.swift */,
+				945D9159299CE0EC0054047A /* ThemeAction.swift */,
+				945D915F299D0ECF0054047A /* MaqalTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		945D9161299D12910054047A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				945D9162299D12A80054047A /* Maqal.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945D915A299CE0EC0054047A /* ThemeAction.swift in Sources */,
 				945D9124299CCE840054047A /* ThemeCollectionViewController.swift in Sources */,
+				945D9163299D12A80054047A /* Maqal.swift in Sources */,
 				945D9120299CCE840054047A /* AppDelegate.swift in Sources */,
+				945D9160299D0ECF0054047A /* MaqalTableViewController.swift in Sources */,
 				945D9158299CD5EC0054047A /* ThemeCollectionViewCell.swift in Sources */,
+				945D915E299D0DD00054047A /* MaqalTableViewCell.swift in Sources */,
 				945D9122299CCE840054047A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
