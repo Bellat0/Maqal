@@ -20,8 +20,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
 
-        let themeCollectionViewController = ThemeCollectionViewController()
-        window?.rootViewController = themeCollectionViewController
+        func createThemeVC() -> UINavigationController {
+            let themeVC = ThemeCollectionViewController()
+            themeVC.title = "Themes of maqal"
+            themeVC.tabBarItem = UITabBarItem(title: "Theme", image: UIImage(named: "home"), tag: 0)
+            return UINavigationController(rootViewController: themeVC)
+        }
+
+        func favouriteThemeVC() -> UINavigationController {
+            let favouriteVC = favouriteThemeVC()
+            favouriteVC.title = "Themes of maqal"
+            favouriteVC.tabBarItem = UITabBarItem(title: "Theme", image: UIImage(named: "star"), tag: 0)
+            return UINavigationController(rootViewController: favouriteVC)
+        }
+
+        func createTabBarController() -> UITabBarController {
+            let tabBarController = UITabBarController()
+            tabBarController.viewControllers = [createThemeVC(), favouriteThemeVC()]
+            return tabBarController
+        }
+
+        window?.rootViewController = createTabBarController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
