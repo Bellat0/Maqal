@@ -23,30 +23,30 @@ enum ThemeAction: String, CaseIterable {
     var themeName: String {
         switch self {
         case .family:
-            return "Otbasy"
+            return "Отбасы"
         case .motherland:
-            return "Otbasy"
+            return "Отан"
         case .wealth:
-            return "Otbasy"
+            return "Байлық"
         case .work:
-            return "Otbasy"
+            return "Еңбек"
         case .health:
-            return "Otbasy"
+            return "Денсаулық"
         }
     }
 
     var themeTranslate: String {
         switch self {
         case .family:
-            return "7YA"
+            return "Семья"
         case .motherland:
-            return "7YA"
+            return "Родина"
         case .wealth:
-            return "7YA"
+            return "Богатство"
         case .work:
-            return "7YA"
+            return "Труд"
         case .health:
-            return "7YA"
+            return "Здоровье"
         }
     }
 
