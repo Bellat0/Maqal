@@ -8,9 +8,19 @@
 import UIKit
 
 class MaqalTableViewController: UIViewController {
-
+    
     let tableView = UITableView()
-    let maqal = [Maqal]()
+
+    let maqal: [Maqal]
+
+    init(maqal: [Maqal]) {
+        self.maqal = maqal
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +29,9 @@ class MaqalTableViewController: UIViewController {
     }
 
     func detailsTableView() {
-        tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(MaqalTableViewCell.self, forCellReuseIdentifier: ThemeCollectionViewCell.reuseIdentifier)
+        tableView.dataSource = self
+        tableView.register(MaqalTableViewCell.self, forCellReuseIdentifier: MaqalTableViewCell.reuseIdentifier)
     }
 
     func layoutUI() {
@@ -30,7 +40,6 @@ class MaqalTableViewController: UIViewController {
             make.edges.equalToSuperview()
         }
     }
-
 }
 
 extension MaqalTableViewController: UITableViewDelegate, UITableViewDataSource {
@@ -39,15 +48,13 @@ extension MaqalTableViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: ThemeCollectionViewCell.reuseIdentifier,
-            for: indexPath
-        ) as? MaqalTableViewCell else { return UITableViewCell() }
-        let maqal = maqal[indexPath.row]
-        cell.configure(maqal: maqal)
-        return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MaqalTableViewCell.reuseIdentifier, for: indexPath) as? MaqalTableViewCell else { return UITableViewCell() }
+        cell.layoutUI()
 
+        let maqal = maqal[indexPath.row]
+        cell.configureCell(maqal: maqal)
+        return cell
     }
 
-
+    
 }

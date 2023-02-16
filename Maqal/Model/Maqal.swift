@@ -12,3 +12,4 @@ struct Maqal {
     let translate: String
     let isFavourite: Bool
 }
+

@@ -9,15 +9,45 @@ import Foundation
 import UIKit
 
 enum ThemeAction: String, CaseIterable {
+
     case motherland = "Motherland"
     case family = "Family"
     case wealth = "Wealth"
     case work = "Work"
     case health = "Health"
 
-
     var image: UIImage? {
         UIImage(named: rawValue)
+    }
+    
+    var themeName: String {
+        switch self {
+        case .family:
+            return "Otbasy"
+        case .motherland:
+            return "Otbasy"
+        case .wealth:
+            return "Otbasy"
+        case .work:
+            return "Otbasy"
+        case .health:
+            return "Otbasy"
+        }
+    }
+
+    var themeTranslate: String {
+        switch self {
+        case .family:
+            return "7YA"
+        case .motherland:
+            return "7YA"
+        case .wealth:
+            return "7YA"
+        case .work:
+            return "7YA"
+        case .health:
+            return "7YA"
+        }
     }
 
     var maqal: [Maqal] {
@@ -34,7 +64,7 @@ enum ThemeAction: String, CaseIterable {
                 Maqal(name: "Туған жердей жер болмас, туған елдей ел болмас", translate: "Нет земли лучше родины своей, лучше, чем на родине нет людей", isFavourite: false)
             ]
         case .family:
-            return [
+            return  [
                 Maqal(name: "Жаман ағайыннан жақсы жекжат артық", translate: "Хороший знакомый, хоть и неродной, лучше намного родни плохой", isFavourite: false),
                 Maqal(name: "Ағайынның азары болса да, безері болмас", translate: "У родни бывают раздоры, но друг от друга не отказываются", isFavourite: false),
                 Maqal(name: "Мал қонысын іздейді, ер туысын іздейді", translate: "Скот ищет хлев свой, джигит — своих родных", isFavourite: false),
@@ -45,7 +75,7 @@ enum ThemeAction: String, CaseIterable {
                 Maqal(name: "Төрт аяқтыда бота тату, екі аяқтыда бажа тату", translate: "Среди четвероногих верблюжата дружат, среди двуногих свояки дружат", isFavourite: false)
             ]
         case .wealth:
-            return [
+            return  [
                 Maqal(name: "Жоққа жүйрік жетпейді", translate: "И самому быстроногому не догнать того, чего нет", isFavourite: false),
                 Maqal(name: "Ай бетінде де дақ бар", translate: "И на луне есть пятна", isFavourite: false),
                 Maqal(name: "Алпыс қарсақ ат болмас", translate: "И шестьдесят корсаков коя не заменят", isFavourite: false),
@@ -70,6 +100,7 @@ enum ThemeAction: String, CaseIterable {
                 Maqal(name: "Жаман болатын жігіт шегіншек келер, кедей болатын жігіт еріншек келер", translate: "Джигит плохой отступает, джигит ленивый обнищает", isFavourite: false),
                 Maqal(name: "Көз қорқақ, кол батыр", translate: "Глаза боятся, а руки не знают страха", isFavourite: false)
             ]
+
         case .health:
             return [
                 Maqal(name: "Ажал айтпай келеді, қонақ күтпей келеді", translate: "И смерть является внезапно, и гость является незвано", isFavourite: false),
@@ -82,26 +113,9 @@ enum ThemeAction: String, CaseIterable {
         }
     }
 
-
-
-
     //    struct Names {
     //        let name: String
     //        let tr: String
-    //    }
-
-    //    var themeName: String {
-    //        switch self {
-    //        case .family:
-    //            return "Otbasy"
-    //        }
-    //    }
-    //
-    //    var themeTranslate: String {
-    //        switch self {
-    //        case .family:
-    //            return "7YA"
-    //        }
     //    }
     //
     //    var themeNameAndTranslate: [Names] {
