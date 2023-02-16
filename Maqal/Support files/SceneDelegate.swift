@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         func favouriteThemeVC() -> UINavigationController {
             let favouriteVC = FavouriteTableViewController()
             favouriteVC.title = "Themes of maqal"
-            favouriteVC.tabBarItem = UITabBarItem(title: "Theme", image: UIImage(named: "star"), tag: 0)
+            favouriteVC.tabBarItem = UITabBarItem(title: "Fav", image: UIImage(named: "star"), tag: 0)
             return UINavigationController(rootViewController: favouriteVC)
         }
 
