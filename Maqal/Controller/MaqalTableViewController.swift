@@ -11,7 +11,7 @@ class MaqalTableViewController: UIViewController {
     
     let tableView = UITableView()
 
-    let maqal: [Maqal]
+    var maqal: [Maqal]
 
     init(maqal: [Maqal]) {
         self.maqal = maqal
@@ -56,5 +56,43 @@ extension MaqalTableViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-    
+    // MARK: Swipe
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let favouriteAction = favouriteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [favouriteAction])
+    }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let shareAction = shareAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [shareAction])
+    }
+
+    func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
+        var maqal = maqal[indexPath.row]
+
+        let action = UIContextualAction(style: .normal, title: "") { action, view, completion in
+            maqal.isFavourite = !maqal.isFavourite
+            self.maqal[indexPath.row] = maqal
+            completion(true)
+        }
+        action.backgroundColor = maqal.isFavourite ? .systemPurple : .systemGray
+        action.image = UIImage(systemName: "star")
+        return action
+    }
+
+    func shareAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "") { action, view, completion in
+
+            let maqal = self.maqal[indexPath.row]
+            let shareController = UIActivityViewController(activityItems: [maqal.name + "\n" + maqal.translate], applicationActivities: nil)
+            self.present(shareController, animated: true)
+            completion(true)
+        }
+        action.backgroundColor = .systemGreen
+        action.image = UIImage(systemName: "square.and.arrow.up")
+        return action
+
+    }
 }
