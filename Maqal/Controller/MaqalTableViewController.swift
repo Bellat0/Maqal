@@ -12,9 +12,11 @@ class MaqalTableViewController: UIViewController {
     let tableView = UITableView()
 
     var maqal: [Maqal]
+    let vcTitle: String
 
-    init(maqal: [Maqal]) {
+    init(maqal: [Maqal], title: String) {
         self.maqal = maqal
+        self.vcTitle = title
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -24,6 +26,7 @@ class MaqalTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = vcTitle
         detailsTableView()
         layoutUI()
     }

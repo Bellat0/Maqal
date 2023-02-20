@@ -23,6 +23,7 @@
 		945D9160299D0ECF0054047A /* MaqalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D915F299D0ECF0054047A /* MaqalTableViewController.swift */; };
 		945D9163299D12A80054047A /* Maqal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D9162299D12A80054047A /* Maqal.swift */; };
 		945D916B299E74D00054047A /* FavouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D916A299E74D00054047A /* FavouriteTableViewController.swift */; };
+		945D916D299F6A8C0054047A /* SearchMaqalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D916C299F6A8C0054047A /* SearchMaqalTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		945D915F299D0ECF0054047A /* MaqalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalTableViewController.swift; sourceTree = "<group>"; };
 		945D9162299D12A80054047A /* Maqal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maqal.swift; sourceTree = "<group>"; };
 		945D916A299E74D00054047A /* FavouriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewController.swift; sourceTree = "<group>"; };
+		945D916C299F6A8C0054047A /* SearchMaqalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMaqalTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				945D9159299CE0EC0054047A /* ThemeAction.swift */,
 				945D915F299D0ECF0054047A /* MaqalTableViewController.swift */,
 				945D916A299E74D00054047A /* FavouriteTableViewController.swift */,
+				945D916C299F6A8C0054047A /* SearchMaqalTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				945D9160299D0ECF0054047A /* MaqalTableViewController.swift in Sources */,
 				945D9158299CD5EC0054047A /* ThemeCollectionViewCell.swift in Sources */,
 				945D915E299D0DD00054047A /* MaqalTableViewCell.swift in Sources */,
+				945D916D299F6A8C0054047A /* SearchMaqalTableViewController.swift in Sources */,
 				945D916B299E74D00054047A /* FavouriteTableViewController.swift in Sources */,
 				945D9122299CCE840054047A /* SceneDelegate.swift in Sources */,
 			);

@@ -22,21 +22,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         func createThemeVC() -> UINavigationController {
             let themeVC = ThemeCollectionViewController()
-            themeVC.title = "Themes of maqal"
-            themeVC.tabBarItem = UITabBarItem(title: "Theme", image: UIImage(named: "home"), tag: 0)
+            themeVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "home"), tag: 0)
             return UINavigationController(rootViewController: themeVC)
         }
 
         func favouriteThemeVC() -> UINavigationController {
             let favouriteVC = FavouriteTableViewController()
-            favouriteVC.title = "Themes of maqal"
-            favouriteVC.tabBarItem = UITabBarItem(title: "Fav", image: UIImage(named: "star"), tag: 0)
+            favouriteVC.title = "Избранные пословицы"
+            favouriteVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "star"), tag: 0)
             return UINavigationController(rootViewController: favouriteVC)
+        }
+
+        func searchVC() -> UINavigationController {
+            let searchVC = SearchMaqalTableViewController()
+
+
+            searchVC.title = "Поиск пословиц"
+            searchVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "search"), tag: 0)
+            return UINavigationController(rootViewController: searchVC)
         }
 
         func createTabBarController() -> UITabBarController {
             let tabBarController = UITabBarController()
-            tabBarController.viewControllers = [createThemeVC(), favouriteThemeVC()]
+            UITabBar.appearance().tintColor = UIColor(red: 59/255, green: 59/255, blue: 59/255, alpha: 1)
+            tabBarController.viewControllers = [createThemeVC(), searchVC(), favouriteThemeVC()]
             return tabBarController
         }
 

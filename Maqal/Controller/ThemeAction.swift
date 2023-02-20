@@ -10,14 +10,18 @@ import UIKit
 
 enum ThemeAction: String, CaseIterable {
 
-    case motherland = "Motherland"
-    case family = "Family"
-    case wealth = "Wealth"
-    case work = "Work"
-    case health = "Health"
+    case motherland = "Отан - Родина"
+    case family = "Отбасы - Семья"
+    case wealth = "Байлық - Богатство"
+    case work = "Еңбек - Труд"
+    case health = "Денсаулық - Здоровье"
 
     var image: UIImage? {
         UIImage(named: rawValue)
+    }
+
+    var title: String {
+        rawValue.capitalized
     }
     
     var themeName: String {
